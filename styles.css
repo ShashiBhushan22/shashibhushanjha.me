@@ -33,6 +33,7 @@ body.dark-mode {
     --success-color: #bbdefb;
     --gradient-1: linear-gradient(135deg, #181c20 0%, #263238 100%);
     --gradient-2: linear-gradient(135deg, #90caf9 0%, #bbdefb 100%);
+}
 
 
 html {
@@ -256,17 +257,39 @@ body {
 
 
 
+
 .btn-primary {
     background: var(--primary-color);
     color: #fff;
-    box-shadow: 0 0 8px #0077b699;
+    box-shadow: 0 2px 8px 0 rgba(10,102,194,0.07);
+    border: none;
+    border-radius: 24px;
+    font-weight: 600;
+    padding: 0.7rem 2rem;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background: #004182;
+    color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(10,102,194,0.13);
+    outline: none;
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 24px #00b4d8cc;
-    background: var(--accent-color);
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 24px;
+    font-weight: 600;
+    padding: 0.7rem 2rem;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+    background: var(--primary-color);
     color: #fff;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 16px 0 rgba(10,102,194,0.13);
+    outline: none;
 }
 
 
@@ -338,21 +361,11 @@ body {
 
 @keyframes fadeInUp {
     from {
+
         opacity: 0;
         transform: translateY(30px);
     }
-
-
-    body {
-        font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
-        line-height: 1.7;
-        color: var(--text-dark);
-        background: var(--bg-white);
-        overflow-x: hidden;
-        background-image: none;
-    }
-
-
+}
 
 .section {
     padding: 80px 0;
@@ -1084,4 +1097,5 @@ body {
     .experience-date {
         align-self: flex-start;
     }
+
 }
