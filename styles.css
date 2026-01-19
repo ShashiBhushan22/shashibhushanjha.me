@@ -1,54 +1,40 @@
 /* ===============================================
    Global Styles & Reset
    =============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-    --primary-color: #a259ff;
-    --secondary-color: #2d0b4e;
-    --accent-color: #6a4cff;
-    --text-dark: #e0e6ed;
-    --text-light: #b8b8d1;
-    --bg-light: #2d0b4e;
-    --bg-white: #1a1032;
-    --border-color: #3d246c;
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #3b82f6;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --border-color: #e2e8f0;
     --success-color: #10b981;
-    --gradient-1: linear-gradient(135deg, #2d0b4e 0%, #6a4cff 100%);
-    --gradient-2: linear-gradient(135deg, #a259ff 0%, #6a4cff 100%);
-    --shadow-sm: 0 1px 2px 0 rgba(162, 89, 255, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(162, 89, 255, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(162, 89, 255, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(162, 89, 255, 0.1);
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
-
-body.dark-mode {
-    --primary-color: #bbdefb;
-    --secondary-color: #90caf9;
-    --accent-color: #64b5f6;
-    --text-dark: #f8f9fa;
-    --text-light: #e0e0e0;
-    --bg-light: #222831;
-    --bg-white: #181c20;
-    --border-color: #263238;
-    --success-color: #bbdefb;
-    --gradient-1: linear-gradient(135deg, #181c20 0%, #263238 100%);
-    --gradient-2: linear-gradient(135deg, #90caf9 0%, #bbdefb 100%);
-}
-
 
 html {
     scroll-behavior: smooth;
 }
 
-
-
-
-    font-family: 'Segoe UI', 'Roboto Mono', 'Fira Mono', 'Menlo', monospace;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: var(--bg-white);
+    background-color: var(--bg-white);
     overflow-x: hidden;
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, #2d0b4e 0%, #6a4cff 100%);
-    background-blend-mode: overlay;
 }
 
 .container {
@@ -60,18 +46,15 @@ html {
 /* ===============================================
    Navigation Bar
    =============================================== */
-
-
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .navbar.scrolled {
@@ -87,14 +70,10 @@ html {
     align-items: center;
 }
 
-
-
 .nav-brand {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
-    letter-spacing: 2px;
-    text-shadow: none;
 }
 
 .nav-menu {
@@ -103,15 +82,12 @@ html {
     gap: 2rem;
 }
 
-
-
 .nav-link {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-    letter-spacing: 1px;
 }
 
 .nav-link::after {
@@ -150,20 +126,16 @@ html {
 /* ===============================================
    Hero Section
    =============================================== */
-
-
-
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f4f8fb 0%, #caf0f8 100%);
-    color: var(--primary-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     text-align: center;
     position: relative;
     padding: 2rem;
-    box-shadow: 0 0 80px 0 #0077b633 inset;
 }
 
 .hero::before {
@@ -173,10 +145,9 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('https://cdn.pixabay.com/photo/2017/01/31/13/14/drone-2020255_1280.png') no-repeat center 80%;
-    background-size: 300px;
-    opacity: 0.08;
-    pointer-events: none;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
 }
 
 .hero-content {
@@ -184,16 +155,11 @@ html {
     z-index: 1;
 }
 
-
-
-
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
-    color: var(--primary-color);
-    text-shadow: none;
 }
 
 .typing-text {
@@ -214,25 +180,18 @@ html {
     50% { border-color: white; }
 }
 
-
-
-
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    opacity: 0.95;
+    opacity: 0.9;
     animation: fadeInUp 1s ease 0.2s backwards;
-    color: var(--secondary-color);
-    text-shadow: none;
 }
-
 
 .hero-institution {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.8;
     animation: fadeInUp 1s ease 0.4s backwards;
-    color: var(--text-dark);
 }
 
 .hero-buttons {
@@ -252,58 +211,26 @@ html {
     display: inline-block;
 }
 
-
-
-
-
 .btn-primary {
-    background: var(--primary-color);
-    color: #fff;
-    box-shadow: 0 2px 8px 0 rgba(10,102,194,0.07);
-    border: none;
-    border-radius: 24px;
-    font-weight: 600;
-    padding: 0.7rem 2rem;
-    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+    background: white;
+    color: var(--primary-color);
 }
-.btn-primary:hover, .btn-primary:focus {
-    background: #004182;
-    color: #fff;
-    box-shadow: 0 4px 16px 0 rgba(10,102,194,0.13);
-    outline: none;
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 24px;
-    font-weight: 600;
-    padding: 0.7rem 2rem;
-    transition: background 0.2s, color 0.2s, border 0.2s;
-}
-.btn-secondary:hover, .btn-secondary:focus {
-    background: var(--primary-color);
-    color: #fff;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 4px 16px 0 rgba(10,102,194,0.13);
-    outline: none;
-}
-
-
-
-
-.btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: white;
+    border: 2px solid white;
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
-    color: #fff;
+    background: white;
+    color: var(--primary-color);
     transform: translateY(-2px);
-    box-shadow: 0 0 24px #00b4d8cc;
 }
 
 .social-links {
@@ -313,29 +240,24 @@ html {
     animation: fadeInUp 1s ease 0.8s backwards;
 }
 
-
-
-
 .social-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(0, 119, 182, 0.12);
+    background: rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-color);
+    color: white;
     font-size: 1.5rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 0 8px #0077b633;
 }
 
 .social-icon:hover {
-    background: var(--primary-color);
-    color: #fff;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 0 24px #00b4d8cc;
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-5px);
 }
 
 .scroll-indicator {
@@ -359,38 +281,35 @@ html {
 
 @keyframes fadeInUp {
     from {
-
         opacity: 0;
         transform: translateY(30px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* ===============================================
+   Section Styles
+   =============================================== */
 .section {
     padding: 80px 0;
-    background: var(--bg-light);
-    border-radius: 24px;
-    margin: 40px 0;
-    box-shadow: 0 0 32px #0077b611;
 }
 
 .section:nth-child(even) {
     background-color: var(--bg-light);
 }
 
-
-
-
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--text-dark);
     position: relative;
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
-    letter-spacing: 2px;
-    text-shadow: none;
 }
 
 .section-title::after {
@@ -401,9 +320,8 @@ html {
     transform: translateX(-50%);
     width: 60px;
     height: 4px;
-    background: var(--primary-color);
+    background: var(--gradient-2);
     border-radius: 2px;
-    box-shadow: 0 0 12px #0077b699;
 }
 
 /* ===============================================
@@ -939,16 +857,11 @@ html {
 /* ===============================================
    Footer
    =============================================== */
-
-
-
 .footer {
-    background: #f4f8fb;
-    color: var(--primary-color);
+    background: var(--text-dark);
+    color: white;
     padding: 2rem 0;
     text-align: center;
-    border-top: 2px solid var(--primary-color);
-    box-shadow: 0 0 32px #0077b633;
 }
 
 .footer p {
@@ -1095,5 +1008,4 @@ html {
     .experience-date {
         align-self: flex-start;
     }
-
 }
