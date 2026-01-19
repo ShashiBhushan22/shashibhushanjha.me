@@ -22,27 +22,18 @@
 }
 
 body.dark-mode {
-    --primary-color: #90caf9;
-    --secondary-color: #1976d2;
+    --primary-color: #bbdefb;
+    --secondary-color: #90caf9;
     --accent-color: #64b5f6;
     --text-dark: #f8f9fa;
-    --text-light: #b0bec5;
+    --text-light: #e0e0e0;
     --bg-light: #222831;
     --bg-white: #181c20;
     --border-color: #263238;
-    --success-color: #90caf9;
+    --success-color: #bbdefb;
     --gradient-1: linear-gradient(135deg, #181c20 0%, #263238 100%);
-    --gradient-2: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
-}
-    --border-color: #e2e8f0;
-    --success-color: #10b981;
-    --gradient-1: linear-gradient(135deg, #f4f8fb 0%, #caf0f8 100%);
-    --gradient-2: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
-    --shadow-sm: 0 1px 2px 0 rgba(0, 119, 182, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 119, 182, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 119, 182, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 119, 182, 0.1);
-}
+    --gradient-2: linear-gradient(135deg, #90caf9 0%, #bbdefb 100%);
+
 
 html {
     scroll-behavior: smooth;
