@@ -8,17 +8,17 @@
 }
 
 :root {
-    --primary-color: #888888;
-    --secondary-color: #555555;
-    --accent-color: #aaaaaa;
+    --primary-color: #ff5252;      /* Bright red for energy/innovation */
+    --secondary-color: #43a047;    /* Green for reliability */
+    --accent-color: #ffd600;       /* Yellow for vibrancy */
     --text-dark: #222222;
     --text-light: #666666;
-    --bg-light: #e0e0e0;
-    --bg-white: #f5f5f5;
-    --border-color: #cccccc;
-    --success-color: #888888;
-    --gradient-1: linear-gradient(135deg, #bdbdbd 0%, #757575 100%);
-    --gradient-2: linear-gradient(135deg, #888888 0%, #aaaaaa 100%);
+    --bg-light: #f5f5f5;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+    --success-color: #43a047;
+    --gradient-1: linear-gradient(135deg, #ff5252 0%, #ffd600 100%);
+    --gradient-2: linear-gradient(135deg, #43a047 0%, #ffd600 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
