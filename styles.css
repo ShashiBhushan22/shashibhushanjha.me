@@ -8,17 +8,17 @@
 }
 
 :root {
-    --primary-color: #ff5252;      /* Bright red for energy/innovation */
-    --secondary-color: #43a047;    /* Green for reliability */
-    --accent-color: #ffd600;       /* Yellow for vibrancy */
-    --text-dark: #222222;
-    --text-light: #666666;
-    --bg-light: #f5f5f5;
+    --primary-color: #2563eb;      /* Blue for innovation/energy */
+    --secondary-color: #1e40af;    /* Deep blue for reliability */
+    --accent-color: #3b82f6;       /* Lighter blue accent */
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f0f4fa;
     --bg-white: #ffffff;
-    --border-color: #e0e0e0;
-    --success-color: #43a047;
-    --gradient-1: linear-gradient(135deg, #ff5252 0%, #ffd600 100%);
-    --gradient-2: linear-gradient(135deg, #43a047 0%, #ffd600 100%);
+    --border-color: #e2e8f0;
+    --success-color: #10b981;
+    --gradient-1: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    --gradient-2: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
