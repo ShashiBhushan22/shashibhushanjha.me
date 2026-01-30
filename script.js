@@ -327,3 +327,32 @@ if ('IntersectionObserver' in window) {
 console.log('🚀 Resume website loaded successfully!');
 console.log('💼 Shashi Bhushan Jha - M.Tech Electrical Engineering');
 console.log('📧 Contact: bhushan.gate2022@gmail.com');
+
+// ===============================================
+// Chatbot CTA Interaction
+// ===============================================
+
+// Hide CTA when chatbot is opened
+document.addEventListener('DOMContentLoaded', () => {
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatbotCta = document.querySelector('.chatbot-cta');
+    
+    if (chatToggle && chatbotCta) {
+        // Hide CTA when chat toggle is clicked
+        chatToggle.addEventListener('click', () => {
+            chatbotCta.style.display = 'none';
+            // Remember that user has seen the chat
+            localStorage.setItem('chatbotSeen', 'true');
+        });
+        
+        // Also hide CTA if user clicks on it
+        chatbotCta.addEventListener('click', () => {
+            chatToggle.click();
+        });
+        
+        // Hide CTA if user has already seen the chatbot
+        if (localStorage.getItem('chatbotSeen') === 'true') {
+            chatbotCta.style.display = 'none';
+        }
+    }
+});
