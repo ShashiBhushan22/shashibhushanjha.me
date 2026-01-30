@@ -50,21 +50,21 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: transparent;
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
     box-shadow: var(--shadow-md);
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,6 +73,11 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-brand {
     color: var(--primary-color);
 }
 
@@ -84,10 +89,15 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-dark);
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
+    padding: 0.5rem 0;
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--text-dark);
 }
 
 .nav-link::after {
@@ -97,11 +107,19 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: white;
     transition: width 0.3s ease;
 }
 
+.navbar.scrolled .nav-link::after {
+    background: var(--primary-color);
+}
+
 .nav-link:hover {
+    color: white;
+}
+
+.navbar.scrolled .nav-link:hover {
     color: var(--primary-color);
 }
 
@@ -119,8 +137,12 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--text-dark);
+    background: white;
     transition: all 0.3s ease;
+}
+
+.navbar.scrolled .hamburger span {
+    background: var(--text-dark);
 }
 
 /* ===============================================
@@ -135,7 +157,8 @@ body {
     color: white;
     text-align: center;
     position: relative;
-    padding: 6rem 2rem 2rem;
+    padding: 8rem 2rem 4rem;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -148,18 +171,23 @@ body {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
     background-size: cover;
     opacity: 0.3;
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .typing-text {
@@ -182,16 +210,19 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    opacity: 0.9;
+    margin-bottom: 0.75rem;
+    opacity: 0.95;
     animation: fadeInUp 1s ease 0.2s backwards;
+    font-weight: 400;
+    letter-spacing: 0.02em;
 }
 
 .hero-institution {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.8;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
     animation: fadeInUp 1s ease 0.4s backwards;
+    font-weight: 300;
 }
 
 .hero-buttons {
@@ -928,14 +959,32 @@ body {
    Profile Photo in Hero
    =============================================== */
 .hero-profile-photo {
-    width: 200px;
-    height: 200px;
-    margin: 1rem auto 2rem;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 2.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 6px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1s ease, float 3s ease-in-out infinite;
+    position: relative;
+}
+
+.hero-profile-photo::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
 .hero-profile-photo img {
