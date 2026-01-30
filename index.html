@@ -471,6 +471,7 @@
     </div>
 
     <script src="script.js"></script>
+<<<<<<< HEAD
     <script src="chat-widget.js"></script>
     <script>
         // Initialize chat widget
@@ -480,6 +481,22 @@
             position: 'bottom-right',
             greeting: "Hi! I'm Shashi's AI Assistant. Ask me anything about my experience, projects, or skills!",
             title: "Chat with Shashi's AI"
+=======
+    
+    <!-- AI Chatbot Widget -->
+    <link rel="stylesheet" href="chat-widget.css">
+    <script src="chat-widget.js"></script>
+    <script>
+        // Initialize the AI chatbot widget
+        document.addEventListener('DOMContentLoaded', function() {
+            ChatWidget.init({
+                apiUrl: 'https://ai-portfolio-chatbot-apme.onrender.com',  // Production backend
+                position: 'bottom-right',
+                primaryColor: '#3b82f6',
+                title: "Shashi's AI Assistant",
+                subtitle: 'Ask me anything about Shashi!'
+            });
+>>>>>>> fa001a9072aba9a6eb50c7bdfdc9b05a7bf61ada
         });
     </script>
 </body>
