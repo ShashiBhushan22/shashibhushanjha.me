@@ -135,7 +135,7 @@ body {
     color: white;
     text-align: center;
     position: relative;
-    padding: 2rem;
+    padding: 6rem 2rem 2rem;
 }
 
 .hero::before {
@@ -930,7 +930,7 @@ body {
 .hero-profile-photo {
     width: 200px;
     height: 200px;
-    margin: 0 auto 2rem;
+    margin: 1rem auto 2rem;
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid rgba(255, 255, 255, 0.3);

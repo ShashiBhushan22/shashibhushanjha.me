@@ -332,27 +332,31 @@ console.log('📧 Contact: bhushan.gate2022@gmail.com');
 // Chatbot CTA Interaction
 // ===============================================
 
-// Hide CTA when chatbot is opened
+// CTA interaction with chatbot
 document.addEventListener('DOMContentLoaded', () => {
     const chatToggle = document.getElementById('chat-toggle');
     const chatbotCta = document.querySelector('.chatbot-cta');
     
     if (chatToggle && chatbotCta) {
-        // Hide CTA when chat toggle is clicked
+        // Hide CTA temporarily when chat is opened, show again when closed
         chatToggle.addEventListener('click', () => {
-            chatbotCta.style.display = 'none';
-            // Remember that user has seen the chat
-            localStorage.setItem('chatbotSeen', 'true');
+            const chatWindow = document.getElementById('chat-window');
+            if (chatWindow && !chatWindow.classList.contains('hidden')) {
+                // Chat is opening, hide CTA temporarily
+                chatbotCta.style.opacity = '0';
+                chatbotCta.style.pointerEvents = 'none';
+            } else {
+                // Chat is closing, show CTA again
+                setTimeout(() => {
+                    chatbotCta.style.opacity = '1';
+                    chatbotCta.style.pointerEvents = 'auto';
+                }, 300);
+            }
         });
         
-        // Also hide CTA if user clicks on it
+        // Click CTA to open chatbot
         chatbotCta.addEventListener('click', () => {
             chatToggle.click();
         });
-        
-        // Hide CTA if user has already seen the chatbot
-        if (localStorage.getItem('chatbotSeen') === 'true') {
-            chatbotCta.style.display = 'none';
-        }
     }
 });
