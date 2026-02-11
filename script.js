@@ -107,10 +107,10 @@ const skillObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const progressBars = entry.target.querySelectorAll('.skill-progress');
             progressBars.forEach(bar => {
-                const width = bar.style.width;
+                const width = bar.dataset.width || bar.style.width.replace('%', '');
                 bar.style.width = '0%';
                 setTimeout(() => {
-                    bar.style.width = width;
+                    bar.style.width = width + '%';
                 }, 100);
             });
             skillObserver.unobserve(entry.target);
@@ -325,8 +325,137 @@ if ('IntersectionObserver' in window) {
 }
 
 console.log('🚀 Resume website loaded successfully!');
-console.log('💼 Shashi Bhushan Jha - M.Tech Electrical Engineering');
+console.log('💼 Shashi Bhushan Jha - M.Tech Electrical Engineering | IPR Professional');
 console.log('📧 Contact: bhushan.gate2022@gmail.com');
+
+// ===============================================
+// Certificate Filter Functionality
+// ===============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterTabs = document.querySelectorAll('.cert-tab');
+    const certCards = document.querySelectorAll('.certificate-card');
+    
+    if (filterTabs.length > 0) {
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                const filter = tab.dataset.filter;
+                
+                // Filter certificates with animation
+                certCards.forEach(card => {
+                    const category = card.dataset.category;
+                    
+                    if (filter === 'all' || category === filter || category === 'all') {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        card.classList.remove('hidden');
+                        
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        
+                        setTimeout(() => {
+                            card.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+    
+    // Add smooth transitions to certificate cards
+    certCards.forEach(card => {
+        card.style.transition = 'all 0.3s ease';
+    });
+});
+
+// ===============================================
+// Interactive Skill Bars Animation
+// ===============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    
+    const animateSkillBars = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.style.width;
+                bar.style.width = '0';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+                
+                observer.unobserve(bar);
+            }
+        });
+    };
+    
+    const skillObserver = new IntersectionObserver(animateSkillBars, {
+        threshold: 0.5
+    });
+    
+    skillBars.forEach(bar => {
+        skillObserver.observe(bar);
+    });
+});
+
+// ===============================================
+// Particle Effect for Hero Section
+// ===============================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero');
+    
+    if (hero) {
+        // Create floating particles
+        for (let i = 0; i < 15; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'hero-particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: ${Math.random() * 10 + 5}px;
+                height: ${Math.random() * 10 + 5}px;
+                background: rgba(255, 255, 255, ${Math.random() * 0.3 + 0.1});
+                border-radius: 50%;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation: float ${Math.random() * 10 + 10}s ease-in-out infinite;
+                animation-delay: ${Math.random() * 5}s;
+                pointer-events: none;
+            `;
+            hero.appendChild(particle);
+        }
+    }
+});
+
+// ===============================================
+// Counter Animation for Stats
+// ===============================================
+
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 30);
+}
 
 // ===============================================
 // Chatbot CTA Interaction
