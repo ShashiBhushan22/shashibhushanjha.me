@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashi Bhushan Jha - CV</title>
+    <style>
+        /* Simple, Clean CV Styles - Print Optimized */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 12mm 15mm;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.4;
+            color: #222;
+            background: white;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+        }
+
+        /* Header with Logo on Left */
+        .cv-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #1a4b8c;
+            margin-bottom: 15px;
+        }
+
+        .logo-section {
+            flex-shrink: 0;
+        }
+
+        .logo-section img {
+            width: 70px;
+            height: auto;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 22pt;
+            font-weight: 700;
+            color: #1a4b8c;
+            letter-spacing: 0.5px;
+            margin-bottom: 3px;
+        }
+
+        .title {
+            font-size: 12pt;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            font-size: 9.5pt;
+            color: #444;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-item a {
+            color: #1a4b8c;
+            text-decoration: none;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #1a4b8c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1.5px solid #1a4b8c;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        /* Objective */
+        .objective {
+            font-size: 10pt;
+            color: #333;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* Education Entry */
+        .edu-entry {
+            margin-bottom: 10px;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .edu-degree {
+            font-weight: 600;
+            font-size: 10.5pt;
+            color: #222;
+        }
+
+        .edu-date {
+            font-size: 9.5pt;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .edu-institution {
+            font-weight: 500;
+            color: #1a4b8c;
+            font-size: 10pt;
+        }
+
+        .edu-details {
+            font-size: 9.5pt;
+            color: #444;
+            margin-top: 2px;
+        }
+
+        /* Experience Entry */
+        .exp-entry {
+            margin-bottom: 12px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-title {
+            font-weight: 600;
+            font-size: 10.5pt;
+            color: #222;
+        }
+
+        .exp-date {
+            font-size: 9.5pt;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .exp-company {
+            font-weight: 500;
+            color: #1a4b8c;
+            font-size: 10pt;
+        }
+
+        .exp-bullets {
+            margin-top: 4px;
+            padding-left: 18px;
+        }
+
+        .exp-bullets li {
+            font-size: 9.5pt;
+            color: #333;
+            margin-bottom: 2px;
+            line-height: 1.4;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 6px;
+        }
+
+        .skill-category-title {
+            font-weight: 600;
+            font-size: 10pt;
+            color: #222;
+            margin-bottom: 2px;
+        }
+
+        .skill-list {
+            font-size: 9.5pt;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+        }
+
+        .cert-item {
+            font-size: 9.5pt;
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+        }
+
+        .cert-item::before {
+            content: "•";
+            color: #1a4b8c;
+            font-weight: bold;
+        }
+
+        .cert-name {
+            font-weight: 500;
+            color: #222;
+        }
+
+        .cert-org {
+            color: #555;
+        }
+
+        /* Projects */
+        .project-entry {
+            margin-bottom: 10px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 10pt;
+            color: #222;
+        }
+
+        .project-date {
+            font-size: 9pt;
+            color: #555;
+        }
+
+        .project-bullets {
+            margin-top: 3px;
+            padding-left: 18px;
+        }
+
+        .project-bullets li {
+            font-size: 9.5pt;
+            color: #333;
+            margin-bottom: 2px;
+            line-height: 1.4;
+        }
+
+        /* Languages */
+        .languages-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+        }
+
+        .lang-item {
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-name {
+            font-weight: 500;
+            color: #222;
+        }
+
+        .lang-level {
+            color: #555;
+        }
+
+        /* Two Column Layout for Bottom */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 10pt;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #1a4b8c !important;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Screen Controls */
+        .print-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .print-btn {
+            padding: 10px 20px;
+            background: #1a4b8c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .print-btn:hover {
+            background: #0d3a6e;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background: white;
+            color: #1a4b8c;
+            border: 2px solid #1a4b8c;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #f0f4fa;
+        }
+
+        @media print {
+            .print-controls {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Print Controls -->
+    <div class="print-controls no-print">
+        <a href="cv.html" class="back-btn">← Back to CV</a>
+        <button class="print-btn" onclick="window.print()">📄 Print / Save PDF</button>
+    </div>
+
+    <!-- Header with IIT Ropar Logo -->
+    <header class="cv-header">
+        <div class="logo-section">
+            <img src="logo/Indian_Institute_of_Technology_Ropar_logo.svg.png" alt="IIT Ropar">
+        </div>
+        <div class="header-content">
+            <h1 class="name">SHASHI BHUSHAN JHA</h1>
+            <p class="title">M.Tech - Electrical Engineering (Signal Processing & Communication) | IPR Professional</p>
+            <div class="contact-bar">
+                <span class="contact-item">📧 <a href="mailto:2024eem1013@iitrpr.ac.in">2024eem1013@iitrpr.ac.in</a></span>
+                <span class="contact-item">📧 <a href="mailto:bhushan.gate2022@gmail.com">bhushan.gate2022@gmail.com</a></span>
+                <span class="contact-item">📞 +91-7091678894</span>
+                <span class="contact-item">🔗 <a href="https://linkedin.com/in/shashi-bhushan-jha-9a1922262">LinkedIn</a></span>
+                <span class="contact-item">🌐 <a href="https://shashibhushanjha.me">shashibhushanjha.me</a></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Career Objective -->
+    <section class="section">
+        <h2 class="section-title">Career Objective</h2>
+        <p class="objective">
+            Seeking a challenging position in <strong>Intellectual Property Rights (IPR)</strong> and <strong>Patent Analysis</strong> where I can leverage my strong technical background in Electrical Engineering, Signal Processing, and Communication Systems. With certified expertise from <strong>WIPO Academy</strong> in IP fundamentals and patent essentials, I aim to contribute to patent drafting, prior art searches, technology transfer, and IP portfolio management in a dynamic organization.
+        </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="edu-entry">
+            <div class="edu-header">
+                <span class="edu-degree">Master of Technology - Electrical Engineering</span>
+                <span class="edu-date">2024 - 2026</span>
+            </div>
+            <div class="edu-institution">Indian Institute of Technology, Ropar</div>
+            <div class="edu-details">CGPA: 7.37 | Specialization: Signal Processing & Communication Systems</div>
+            <div class="edu-details">Coursework: Advanced DSP, Communication Theory, Detection & Estimation</div>
+        </div>
+
+        <div class="edu-entry">
+            <div class="edu-header">
+                <span class="edu-degree">Bachelor of Engineering - Electronics & Communication</span>
+                <span class="edu-date">2016 - 2022</span>
+            </div>
+            <div class="edu-institution">Purbanchal University, Biratnagar, Nepal</div>
+            <div class="edu-details">CGPA: 2.98 / 4.00</div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="exp-entry">
+            <div class="exp-header">
+                <span class="exp-title">Research Intern - Autonomous Systems</span>
+                <span class="exp-date">Sept 2025 - Present</span>
+            </div>
+            <div class="exp-company">SkyFlock Uaviation Pvt. Ltd. | Remote</div>
+            <ul class="exp-bullets">
+                <li>Developing Python scripts for inter-drone communication protocols within a Swarm network</li>
+                <li>Utilizing ROS2 for real-time telemetry data analysis and state estimation of autonomous agents</li>
+                <li>Simulating multi-agent logic in Gazebo, optimizing path-planning algorithms for coordinated tasks</li>
+            </ul>
+        </div>
+
+        <div class="exp-entry">
+            <div class="exp-header">
+                <span class="exp-title">Instructor - Computer Science & Python</span>
+                <span class="exp-date">April 2022 - Dec 2023</span>
+            </div>
+            <div class="exp-company">Delhi Public School, Dharan | Nepal</div>
+            <ul class="exp-bullets">
+                <li>Taught Python Programming fundamentals to senior students</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-category-title">AI & Machine Learning</div>
+                <div class="skill-list">Generative AI (RAG, LLMs), Computer Vision, Deep Learning, Detection Theory</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Languages & Frameworks</div>
+                <div class="skill-list">Python, Pandas, NumPy, OpenCV, scikit-learn, FastAPI, MATLAB, C++, ROS2</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Tools & Platforms</div>
+                <div class="skill-list">Groq API, Render, Git/GitHub, Docker, Linux, Gazebo</div>
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Core Competencies</div>
+                <div class="skill-list">Algorithm Optimization, Signal Processing, Autonomous Systems, Data Analysis, IP Fundamentals</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section class="section">
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="project-entry">
+            <div class="project-header">
+                <span class="project-title">GenAI RAG Chatbot Assistant</span>
+                <span class="project-date">Jan 2026 | Personal Project (Live)</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Developed a lightweight RAG chatbot using FastAPI and Groq LPU (Llama 3.3) for context-aware answers</li>
+                <li>Engineered custom TF-IDF retrieval pipeline using scikit-learn, optimizing memory usage to &lt;100MB</li>
+                <li>Deployed on Render with custom JavaScript widget, achieving sub-500ms inference latency</li>
+            </ul>
+        </div>
+
+        <div class="project-entry">
+            <div class="project-header">
+                <span class="project-title">Receiver Design using Machine Learning (NOMA)</span>
+                <span class="project-date">July 2025 - May 2026 | Master's Thesis</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Designed Deep Learning-based detection system for NOMA signals using Neural Networks for optimal SIC</li>
+                <li>Optimized data processing pipelines for high-noise environments (Rayleigh Fading)</li>
+            </ul>
+        </div>
+
+        <div class="project-entry">
+            <div class="project-header">
+                <span class="project-title">Smart Surveillance with Computer Vision</span>
+                <span class="project-date">July - Dec 2024 | Academic</span>
+            </div>
+            <ul class="project-bullets">
+                <li>Developed real-time object detection system using Python & OpenCV for motion tracking</li>
+                <li>Implemented Edge Detection and background subtraction for automated intruder identification</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Two Column: Certifications and Languages -->
+    <div class="two-col">
+        <!-- Certifications -->
+        <section class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-item">
+                <span><span class="cert-name">General Course on IP (DL-101)</span> - <span class="cert-org">WIPO Academy, 2025</span></span>
+            </div>
+            <div class="cert-item">
+                <span><span class="cert-name">Essentials of Patents (DL-320)</span> - <span class="cert-org">WIPO Academy, 2025</span></span>
+            </div>
+            <div class="cert-item">
+                <span><span class="cert-name">CS105: Introduction to Python</span> - <span class="cert-org">Saylor Academy, 2023</span></span>
+            </div>
+            <div class="cert-item">
+                <span><span class="cert-name">Internet of Things (IoT)</span> - <span class="cert-org">Certification Course</span></span>
+            </div>
+            <div class="cert-item">
+                <span><span class="cert-name">Web Design</span> - <span class="cert-org">Certification Course</span></span>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages-list">
+                <div class="lang-item"><span class="lang-name">English</span> <span class="lang-level">(Professional)</span></div>
+                <div class="lang-item"><span class="lang-name">Hindi</span> <span class="lang-level">(Native)</span></div>
+                <div class="lang-item"><span class="lang-name">Nepali</span> <span class="lang-level">(Native)</span></div>
+                <div class="lang-item"><span class="lang-name">Maithili</span> <span class="lang-level">(Native)</span></div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
