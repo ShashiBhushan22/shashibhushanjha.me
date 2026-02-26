@@ -102,24 +102,27 @@ document.querySelectorAll('.timeline-item, .experience-card, .project-card, .ski
 // Skill Progress Bar Animation
 // ===============================================
 
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progressBars = entry.target.querySelectorAll('.skill-progress');
-            progressBars.forEach(bar => {
-                const width = bar.dataset.width || bar.style.width.replace('%', '');
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width + '%';
-                }, 100);
-            });
-            skillObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
+document.addEventListener('DOMContentLoaded', () => {
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBars = entry.target.querySelectorAll('.skill-progress');
+                progressBars.forEach((bar, index) => {
+                    const width = bar.dataset.width || '0';
+                    bar.style.width = '0%';
+                    bar.style.transition = 'width 0.8s ease-out';
+                    setTimeout(() => {
+                        bar.style.width = width + '%';
+                    }, 150 + (index * 100));
+                });
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3, rootMargin: '0px 0px -50px 0px' });
 
-document.querySelectorAll('.skill-category').forEach(category => {
-    skillObserver.observe(category);
+    document.querySelectorAll('.skill-category').forEach(category => {
+        skillObserver.observe(category);
+    });
 });
 
 // ===============================================
@@ -378,37 +381,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ===============================================
-// Interactive Skill Bars Animation
-// ===============================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    const animateSkillBars = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const bar = entry.target;
-                const width = bar.style.width;
-                bar.style.width = '0';
-                
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-                
-                observer.unobserve(bar);
-            }
-        });
-    };
-    
-    const skillObserver = new IntersectionObserver(animateSkillBars, {
-        threshold: 0.5
-    });
-    
-    skillBars.forEach(bar => {
-        skillObserver.observe(bar);
-    });
-});
 
 // ===============================================
 // Particle Effect for Hero Section
