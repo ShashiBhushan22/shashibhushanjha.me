@@ -81,6 +81,9 @@ const ChatWidget = (function() {
                             <button class="quick-action" data-message="Tell me about your projects">
                                 🚀 Projects
                             </button>
+                            <button class="quick-action" data-message="Tell me about Telecom Demystified blog">
+                                📡 Telecom Blog
+                            </button>
                             <button class="quick-action" data-message="How can I contact you?">
                                 📬 Contact Info
                             </button>
