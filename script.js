@@ -24,6 +24,7 @@ const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', navMenu.classList.contains('active').toString());
     
     // Animate hamburger
     const spans = hamburger.querySelectorAll('span');
@@ -42,6 +43,7 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = 'none';
         spans[1].style.opacity = '1';
@@ -206,18 +208,6 @@ window.addEventListener('scroll', () => {
 });
 
 // ===============================================
-// Smooth Reveal on Page Load
-// ===============================================
-
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// ===============================================
 // Interactive Project Cards
 // ===============================================
 
@@ -328,7 +318,7 @@ if ('IntersectionObserver' in window) {
 }
 
 console.log('🚀 Resume website loaded successfully!');
-console.log('💼 Shashi Bhushan Jha - M.Tech Electrical Engineering | IPR Professional');
+console.log('💼 Shashi Bhushan Jha - Wireless Communications Researcher');
 console.log('📧 Contact: bhushan.gate2022@gmail.com');
 
 // ===============================================

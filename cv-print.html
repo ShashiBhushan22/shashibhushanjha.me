@@ -1,574 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PXCLWBZT3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0PXCLWBZT3');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashi Bhushan Jha - CV</title>
+    <meta name="description" content="Academic CV of Shashi Bhushan Jha, a wireless communications researcher working on NOMA, BER analysis, SIC, and future 6G technologies.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shashibhushanjha.me/cv-print.html">
+    <title>Shashi Bhushan Jha | Academic CV</title>
     <style>
-        /* Simple, Clean CV Styles - Print Optimized */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --ink: #172033;
+            --muted: #4b5565;
+            --accent: #174a7e;
+            --rule: #cbd5e1;
+            --paper: #ffffff;
+            --canvas: #e8edf3;
         }
 
-        @page {
-            size: A4;
-            margin: 12mm 15mm;
-        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            font-size: 10.5pt;
-            line-height: 1.4;
-            color: #222;
-            background: white;
-            max-width: 210mm;
-            margin: 0 auto;
-            padding: 15mm;
+            margin: 0;
+            background: var(--canvas);
+            color: var(--ink);
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            font-size: 10.25pt;
+            line-height: 1.38;
         }
 
-        /* Header with Logo on Left */
-        .cv-header {
+        a { color: inherit; text-decoration: none; }
+        a:hover { color: var(--accent); text-decoration: underline; }
+
+        .document-actions {
+            position: sticky;
+            top: 0;
+            z-index: 10;
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding-bottom: 12px;
-            border-bottom: 3px solid #1a4b8c;
-            margin-bottom: 15px;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.8rem;
+            background: rgba(23, 32, 51, 0.96);
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
         }
 
-        .logo-section {
-            flex-shrink: 0;
+        .document-actions a,
+        .document-actions button {
+            min-height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            padding: 0.55rem 1rem;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font: 600 0.9rem/1 "Segoe UI", Arial, sans-serif;
         }
 
-        .logo-section img {
-            width: 70px;
-            height: auto;
+        .document-actions .primary-action {
+            border-color: #fff;
+            background: #fff;
+            color: var(--ink);
         }
 
-        .header-content {
-            flex: 1;
-        }
-
-        .name {
-            font-size: 22pt;
-            font-weight: 700;
-            color: #1a4b8c;
-            letter-spacing: 0.5px;
-            margin-bottom: 3px;
-        }
-
-        .title {
-            font-size: 12pt;
-            color: #333;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .contact-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 20px;
-            font-size: 9.5pt;
-            color: #444;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .contact-item a {
-            color: #1a4b8c;
+        .document-actions a:hover,
+        .document-actions button:hover {
+            background: #dbeafe;
+            color: #12385f;
             text-decoration: none;
         }
 
-        /* Section Styles */
-        .section {
-            margin-bottom: 14px;
+        .cv-sheet {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 14mm 16mm 13mm;
+            background: var(--paper);
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.16);
         }
 
-        .section-title {
-            font-size: 12pt;
+        .cv-header {
+            padding-bottom: 5mm;
+            border-bottom: 2px solid var(--accent);
+            text-align: center;
+        }
+
+        .cv-header h1 {
+            margin: 0;
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25pt;
             font-weight: 700;
-            color: #1a4b8c;
+            letter-spacing: 0.055em;
+            line-height: 1.1;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1.5px solid #1a4b8c;
-            padding-bottom: 3px;
-            margin-bottom: 10px;
         }
 
-        /* Objective */
-        .objective {
-            font-size: 10pt;
-            color: #333;
-            line-height: 1.5;
-            text-align: justify;
+        .cv-header .headline {
+            margin: 1.5mm 0 2.5mm;
+            color: var(--accent);
+            font-size: 11.5pt;
+            font-weight: 700;
+            letter-spacing: 0.025em;
         }
 
-        /* Education Entry */
-        .edu-entry {
-            margin-bottom: 10px;
+        .contact-line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1mm 3mm;
+            color: var(--muted);
+            font-size: 9.2pt;
         }
 
-        .edu-header {
+        .contact-line span:not(:last-child)::after {
+            margin-left: 3mm;
+            color: #94a3b8;
+            content: "|";
+        }
+
+        main { padding-top: 2mm; }
+        .cv-section { margin-top: 4mm; }
+
+        .section-heading {
+            break-after: avoid;
+            margin: 0 0 2mm;
+            padding-bottom: 1mm;
+            border-bottom: 1px solid var(--rule);
+            color: var(--accent);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 11.5pt;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        p { margin: 0; }
+        .profile { text-align: justify; }
+
+        .interest-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4mm 4mm;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .interest-list li::before {
+            margin-right: 1.5mm;
+            color: var(--accent);
+            content: "•";
+        }
+
+        .entry {
+            break-inside: avoid;
+            margin-top: 2.7mm;
+        }
+
+        .entry:first-of-type { margin-top: 0; }
+
+        .entry-heading {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 5mm;
+        }
+
+        .entry-heading h3 {
+            margin: 0;
+            color: var(--ink);
+            font-size: 10.6pt;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .entry-date {
+            flex: 0 0 auto;
+            color: var(--muted);
+            font-size: 9.2pt;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .entry-subheading {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .edu-degree {
-            font-weight: 600;
-            font-size: 10.5pt;
-            color: #222;
-        }
-
-        .edu-date {
+            gap: 5mm;
+            margin-top: 0.4mm;
+            color: var(--muted);
             font-size: 9.5pt;
-            color: #555;
-            font-weight: 500;
+            font-style: italic;
         }
 
-        .edu-institution {
-            font-weight: 500;
-            color: #1a4b8c;
-            font-size: 10pt;
-        }
+        .entry ul { margin: 1mm 0 0; padding-left: 4.5mm; }
+        .entry li { margin: 0.65mm 0; padding-left: 0.6mm; }
+        .status-label { color: var(--accent); font-weight: 700; }
 
-        .edu-details {
-            font-size: 9.5pt;
-            color: #444;
-            margin-top: 2px;
-        }
-
-        /* Experience Entry */
-        .exp-entry {
-            margin-bottom: 12px;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .exp-title {
-            font-weight: 600;
-            font-size: 10.5pt;
-            color: #222;
-        }
-
-        .exp-date {
-            font-size: 9.5pt;
-            color: #555;
-            font-weight: 500;
-        }
-
-        .exp-company {
-            font-weight: 500;
-            color: #1a4b8c;
-            font-size: 10pt;
-        }
-
-        .exp-bullets {
-            margin-top: 4px;
-            padding-left: 18px;
-        }
-
-        .exp-bullets li {
-            font-size: 9.5pt;
-            color: #333;
-            margin-bottom: 2px;
-            line-height: 1.4;
-        }
-
-        /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px 20px;
+            grid-template-columns: 31mm 1fr;
+            gap: 1.4mm 4mm;
         }
 
-        .skill-category {
-            margin-bottom: 6px;
-        }
+        .skills-grid dt { color: var(--ink); font-weight: 700; }
+        .skills-grid dd { margin: 0; color: var(--muted); }
 
-        .skill-category-title {
-            font-weight: 600;
-            font-size: 10pt;
-            color: #222;
-            margin-bottom: 2px;
-        }
-
-        .skill-list {
-            font-size: 9.5pt;
-            color: #444;
-            line-height: 1.4;
-        }
-
-        /* Certifications */
-        .cert-grid {
+        .compact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px 20px;
+            gap: 2.5mm 7mm;
         }
 
-        .cert-item {
-            font-size: 9.5pt;
-            display: flex;
-            align-items: baseline;
-            gap: 5px;
+        .compact-grid .entry { margin-top: 0; }
+        .note { color: var(--muted); font-size: 9pt; }
+
+        .updated {
+            margin-top: 5mm;
+            color: #64748b;
+            font-size: 8pt;
+            text-align: right;
         }
 
-        .cert-item::before {
-            content: "•";
-            color: #1a4b8c;
-            font-weight: bold;
-        }
+        @page { size: A4; margin: 10mm 11mm; }
 
-        .cert-name {
-            font-weight: 500;
-            color: #222;
-        }
-
-        .cert-org {
-            color: #555;
-        }
-
-        /* Projects */
-        .project-entry {
-            margin-bottom: 10px;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .project-title {
-            font-weight: 600;
-            font-size: 10pt;
-            color: #222;
-        }
-
-        .project-date {
-            font-size: 9pt;
-            color: #555;
-        }
-
-        .project-bullets {
-            margin-top: 3px;
-            padding-left: 18px;
-        }
-
-        .project-bullets li {
-            font-size: 9.5pt;
-            color: #333;
-            margin-bottom: 2px;
-            line-height: 1.4;
-        }
-
-        /* Languages */
-        .languages-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 10pt;
-        }
-
-        .lang-item {
-            display: flex;
-            gap: 5px;
-        }
-
-        .lang-name {
-            font-weight: 500;
-            color: #222;
-        }
-
-        .lang-level {
-            color: #555;
-        }
-
-        /* Two Column Layout for Bottom */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* Print Styles */
         @media print {
             body {
+                background: #fff;
+                color: #000;
+                font-size: 9.6pt;
+                line-height: 1.32;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .document-actions { display: none !important; }
+
+            .cv-sheet {
+                width: auto;
+                min-height: auto;
+                margin: 0;
                 padding: 0;
-                font-size: 10pt;
+                box-shadow: none;
             }
 
-            .section {
-                page-break-inside: avoid;
+            .cv-section { margin-top: 3.2mm; }
+            .cv-header { padding-bottom: 3.5mm; }
+            .page-break { break-before: page; }
+            a { color: inherit; text-decoration: none; }
+        }
+
+        @media screen and (max-width: 850px) {
+            body { background: #fff; }
+
+            .cv-sheet {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 1.25rem;
+                box-shadow: none;
             }
 
-            a {
-                color: #1a4b8c !important;
+            .cv-header h1 { font-size: 2rem; }
+
+            .contact-line {
+                flex-direction: column;
+                gap: 0.3rem;
             }
 
-            .no-print {
-                display: none;
+            .contact-line span:not(:last-child)::after { content: ""; }
+            .entry-heading, .entry-subheading { display: block; }
+
+            .entry-date {
+                display: block;
+                margin-top: 0.2rem;
+                white-space: normal;
             }
-        }
 
-        /* Screen Controls */
-        .print-controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
-        }
-
-        .print-btn {
-            padding: 10px 20px;
-            background: #1a4b8c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .print-btn:hover {
-            background: #0d3a6e;
-        }
-
-        .back-btn {
-            padding: 10px 20px;
-            background: white;
-            color: #1a4b8c;
-            border: 2px solid #1a4b8c;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .back-btn:hover {
-            background: #f0f4fa;
-        }
-
-        @media print {
-            .print-controls {
-                display: none;
-            }
+            .skills-grid, .compact-grid { grid-template-columns: 1fr; }
+            .skills-grid { gap: 0.15rem; }
+            .skills-grid dd { margin-bottom: 0.45rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Print Controls -->
-    <div class="print-controls no-print">
-        <a href="cv.html" class="back-btn">← Back to CV</a>
-        <button class="print-btn" onclick="window.print()">📄 Print / Save PDF</button>
-    </div>
+    <nav class="document-actions" aria-label="CV actions">
+        <a href="index.html">Back to portfolio</a>
+        <a class="primary-action" href="Shashi_Bhushan_Jha_CV.pdf" download>Download PDF</a>
+        <button type="button" onclick="window.print()">Print / Save as PDF</button>
+    </nav>
 
-    <!-- Header with IIT Ropar Logo -->
-    <header class="cv-header">
-        <div class="logo-section">
-            <img src="logo/Indian_Institute_of_Technology_Ropar_logo.svg.png" alt="IIT Ropar">
-        </div>
-        <div class="header-content">
-            <h1 class="name">SHASHI BHUSHAN JHA</h1>
-            <p class="title">M.Tech - Electrical Engineering (Signal Processing & Communication) | Wireless Communications</p>
-            <div class="contact-bar">
-                <span class="contact-item">📧 <a href="mailto:2024eem1013@iitrpr.ac.in">2024eem1013@iitrpr.ac.in</a></span>
-                <span class="contact-item">📧 <a href="mailto:bhushan.gate2022@gmail.com">bhushan.gate2022@gmail.com</a></span>
-                <span class="contact-item">📞 +91-7091678894</span>
-                <span class="contact-item">🔗 <a href="https://linkedin.com/in/shashi-bhushan-jha-9a1922262">LinkedIn</a></span>
-                <span class="contact-item">🌐 <a href="https://shashibhushanjha.me">shashibhushanjha.me</a></span>
+    <article class="cv-sheet">
+        <header class="cv-header">
+            <h1>Shashi Bhushan Jha</h1>
+            <p class="headline">Wireless Communications Researcher</p>
+            <div class="contact-line" aria-label="Contact information">
+                <span>Nepal</span>
+                <span><a href="tel:+917091678894">+91 70916 78894</a></span>
+                <span><a href="mailto:bhushan.gate2022@gmail.com">bhushan.gate2022@gmail.com</a></span>
+                <span><a href="https://shashibhushanjha.me">shashibhushanjha.me</a></span>
             </div>
-        </div>
-    </header>
+            <div class="contact-line">
+                <span><a href="https://www.linkedin.com/in/shashi-bhushan-jha-9a1922262">linkedin.com/in/shashi-bhushan-jha-9a1922262</a></span>
+                <span><a href="https://github.com/ShashiBhushan22">github.com/ShashiBhushan22</a></span>
+            </div>
+        </header>
 
-    <!-- Career Objective -->
-    <section class="section">
-        <h2 class="section-title">Career Objective</h2>
-        <p class="objective">
-            Seeking a challenging role in <strong>wireless communications</strong> and <strong>systems engineering</strong> where I can apply my background in signal processing, communication theory, and data-driven analysis to PHY-layer algorithm development and performance characterization. Through my M.Tech work at <strong>IIT Ropar</strong>, including 5G NOMA receiver design, adaptive filtering, and detection & estimation coursework, I am building strong foundations in receiver algorithm prototyping using <strong>MATLAB, Python, and C++ on Linux</strong> for next-generation wireless systems.
-        </p>
-    </section>
+        <main>
+            <section class="cv-section" aria-labelledby="profile-heading">
+                <h2 class="section-heading" id="profile-heading">Research Profile</h2>
+                <p class="profile">M.Tech graduate in Electrical Engineering with a specialization in Communication and Signal Processing. My research focuses on analytical modeling and simulation of wireless multiple-access systems, PHY-layer receiver design, bit-error-rate analysis, and successive interference cancellation. I am seeking research and doctoral opportunities in wireless communications and emerging 6G systems.</p>
+            </section>
 
-    <!-- Education -->
-    <section class="section">
-        <h2 class="section-title">Education</h2>
-        
-        <div class="edu-entry">
-            <div class="edu-header">
-                <span class="edu-degree">Master of Technology in Electrical Engineering</span>
-                <span class="edu-date">2024 - 2026</span>
-            </div>
-            <div class="edu-institution">Indian Institute of Technology, Ropar</div>
-            <div class="edu-details">CGPA: 7.37 | Specialization: Communication and Signal Processing</div>
-            <div class="edu-details">Coursework: Advanced DSP, Communication Theory, Detection & Estimation</div>
-        </div>
+            <section class="cv-section" aria-labelledby="interests-heading">
+                <h2 class="section-heading" id="interests-heading">Research Interests</h2>
+                <ul class="interest-list">
+                    <li>Wireless communications and signal processing</li>
+                    <li>6G and beyond</li>
+                    <li>Non-terrestrial networks (NTN)</li>
+                    <li>Integrated sensing and communications (ISAC)</li>
+                    <li>Multiple access and NOMA</li>
+                    <li>PHY-layer receiver algorithms</li>
+                </ul>
+            </section>
 
-        <div class="edu-entry">
-            <div class="edu-header">
-                <span class="edu-degree">Bachelor of Engineering in Electrical Engineering</span>
-                <span class="edu-date">2016 - 2022</span>
-            </div>
-            <div class="edu-institution">Purbanchal University, Biratnagar, Nepal</div>
-            <div class="edu-details">CGPA: 2.98 / 4.00 | Majors: Power System</div>
-        </div>
-    </section>
+            <section class="cv-section" aria-labelledby="education-heading">
+                <h2 class="section-heading" id="education-heading">Education</h2>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Master of Technology in Electrical Engineering</h3>
+                        <span class="entry-date">2024–2026</span>
+                    </div>
+                    <div class="entry-subheading">
+                        <span>Indian Institute of Technology Ropar</span>
+                        <span>CGPA: 7.78/10</span>
+                    </div>
+                    <p><strong>Specialization:</strong> Communication and Signal Processing</p>
+                    <p><strong>Thesis:</strong> “Generalization of Downlink and Uplink NOMA Framework for Future Generation Technology”</p>
+                    <p><strong>Supervisor:</strong> Dr. Satyam Agarwal</p>
+                </div>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Bachelor of Engineering in Electrical Engineering</h3>
+                        <span class="entry-date">2016–2022</span>
+                    </div>
+                    <div class="entry-subheading">
+                        <span>Purbanchal University, Biratnagar, Nepal</span>
+                        <span>CGPA: 2.98/4.00</span>
+                    </div>
+                    <p><strong>Major:</strong> Power Systems</p>
+                </div>
+            </section>
 
-    <!-- Professional Experience -->
-    <section class="section">
-        <h2 class="section-title">Professional Experience</h2>
-        
-        <div class="exp-entry">
-            <div class="exp-header">
-                <span class="exp-title">Research Intern - Autonomous Systems</span>
-                <span class="exp-date">Sept 2025 - Present</span>
-            </div>
-            <div class="exp-company">SkyFlock Uaviation Pvt. Ltd. | Remote</div>
-            <ul class="exp-bullets">
-                <li>Developing Python scripts for inter-drone communication protocols within a Swarm network</li>
-                <li>Utilizing ROS2 for real-time telemetry data analysis and state estimation of autonomous agents</li>
-                <li>Simulating multi-agent logic in Gazebo, optimizing path-planning algorithms for coordinated tasks</li>
-            </ul>
-        </div>
+            <section class="cv-section" aria-labelledby="publication-heading">
+                <h2 class="section-heading" id="publication-heading">Manuscript in Preparation</h2>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Analytical BER Study with Hardware Validation for N-User NOMA</h3>
+                        <span class="entry-date status-label">Internal review</span>
+                    </div>
+                    <p>Prepared for submission to an IEEE Transactions journal; currently undergoing internal faculty review.</p>
+                </div>
+            </section>
 
-        <div class="exp-entry">
-            <div class="exp-header">
-                <span class="exp-title">Instructor - Computer Science & Python</span>
-                <span class="exp-date">April 2022 - Dec 2023</span>
-            </div>
-            <div class="exp-company">Delhi Public School, Dharan | Nepal</div>
-            <ul class="exp-bullets">
-                <li>Taught Python Programming fundamentals to senior students</li>
-            </ul>
-        </div>
-    </section>
+            <section class="cv-section" aria-labelledby="research-heading">
+                <h2 class="section-heading" id="research-heading">Research Experience</h2>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Master’s Thesis Research — Power-Domain NOMA</h3>
+                        <span class="entry-date">Jul 2025–May 2026</span>
+                    </div>
+                    <div class="entry-subheading">
+                        <span>Indian Institute of Technology Ropar</span>
+                        <span>Communication and Signal Processing</span>
+                    </div>
+                    <ul>
+                        <li>Developed a unified BER and throughput framework for 2–4-user uplink and downlink power-domain NOMA over flat Rayleigh fading with explicit SIC-error modeling.</li>
+                        <li>Derived closed-form two-user downlink BER expressions and SIC-consistent uplink and generalized multi-user formulations.</li>
+                        <li>Evaluated power allocation, distance-based user ordering, SIC depth, NOMA–OMA throughput, and oversampling through Monte Carlo simulation.</li>
+                        <li>Showed how oversampling reduces effective noise variance while user ordering and error propagation continue to govern SIC reliability.</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Research Intern — Autonomous Systems</h3>
+                        <span class="entry-date">Sep 2025–Mar 2026</span>
+                    </div>
+                    <div class="entry-subheading">
+                        <span>SkyFlock Uaviation Pvt. Ltd.</span>
+                        <span>Remote</span>
+                    </div>
+                    <ul>
+                        <li>Studied swarm-drone architectures and inter-drone communication protocols.</li>
+                        <li>Used ROS 2, Gazebo, PX4, and MAVSDK for multi-agent simulation, control, and telemetry analysis.</li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Technical Skills -->
-    <section class="section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <div class="skill-category-title">Wireless Communication & DSP</div>
-                <div class="skill-list">5G NOMA, Communication Theory, Detection & Estimation, Adaptive Filtering, SIC / BER Analysis</div>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Programming & Analysis</div>
-                <div class="skill-list">Python, MATLAB, C++, Pandas, NumPy, scikit-learn, OpenCV, FastAPI</div>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Tools & Platforms</div>
-                <div class="skill-list">Git/GitHub, Linux, Docker, Render, Gazebo, Groq API</div>
-            </div>
-            <div class="skill-category">
-                <div class="skill-category-title">Core Competencies</div>
-                <div class="skill-list">Receiver Design, Signal Processing, Performance Characterization, Data Analysis, Technical Writing</div>
-            </div>
-        </div>
-    </section>
+            <section class="cv-section page-break" aria-labelledby="experience-heading">
+                <h2 class="section-heading" id="experience-heading">Professional Experience</h2>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Trainee Associate — Prosecution and Drafting Department</h3>
+                        <span class="entry-date">18 May 2026–12 Aug 2026</span>
+                    </div>
+                    <div class="entry-subheading">
+                        <span>InventIP Legal Services LLP</span>
+                        <span>Gurugram</span>
+                    </div>
+                    <ul>
+                        <li>Worked in the Prosecution and Drafting Department, gaining professional experience with patent prosecution and drafting workflows.</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Instructor — Computer Science and Mathematics</h3>
+                        <span class="entry-date">Apr 2022–Dec 2023</span>
+                    </div>
+                    <div class="entry-subheading">
+                        <span>Delhi Public School, Dharan</span>
+                        <span>Nepal</span>
+                    </div>
+                    <ul>
+                        <li>Taught Python programming, computational thinking, and mathematics; developed course materials and mentored senior students.</li>
+                    </ul>
+                </div>
+            </section>
 
-    <!-- Key Projects -->
-    <section class="section">
-        <h2 class="section-title">Key Projects</h2>
-        
-        <div class="project-entry">
-            <div class="project-header">
-                <span class="project-title">Telecom Demystified</span>
-                <span class="project-date">Feb 2026 - Present | Technical Blog (<a href="https://telecomdemystified.dev/">telecomdemystified.dev</a>)</span>
-            </div>
-            <ul class="project-bullets">
-                <li>Built a website to document my learning and understanding of wireless communication concepts including 3G/4G/5G, NOMA, OFDM, IoT, and signal processing fundamentals</li>
-                <li>Use technical writing to simplify complex telecom ideas and strengthen system-level understanding through regular study and explanation</li>
-            </ul>
-        </div>
+            <section class="cv-section" aria-labelledby="projects-heading">
+                <h2 class="section-heading" id="projects-heading">Selected Technical Projects</h2>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <h3>Echo Cancellation Using Adaptive Filtering</h3>
+                        <span class="entry-date">Jan–May 2025</span>
+                    </div>
+                    <ul>
+                        <li>Implemented normalized least-mean-square adaptive filtering in MATLAB to suppress acoustic echo and assess convergence and signal-quality behavior.</li>
+                    </ul>
+                </div>
+                <div class="compact-grid">
+                    <div class="entry">
+                        <div class="entry-heading">
+                            <h3>Audio Signal Analysis</h3>
+                            <span class="entry-date">2024</span>
+                        </div>
+                        <p class="note">FFT, spectrogram, and MFCC-based time-frequency analysis using Python, SciPy, and Librosa.</p>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-heading">
+                            <h3>Smart Surveillance</h3>
+                            <span class="entry-date">2024</span>
+                        </div>
+                        <p class="note">Real-time motion detection and object tracking using Python, OpenCV, edge detection, and frame differencing.</p>
+                    </div>
+                </div>
+            </section>
 
-        <div class="project-entry">
-            <div class="project-header">
-                <span class="project-title">GenAI RAG Chatbot Assistant</span>
-                <span class="project-date">Jan 2026 | Personal Project (Live)</span>
-            </div>
-            <ul class="project-bullets">
-                <li>Developed a lightweight RAG chatbot using FastAPI and Groq LPU (Llama 3.3) for context-aware answers</li>
-                <li>Engineered custom TF-IDF retrieval pipeline using scikit-learn, optimizing memory usage to &lt;100MB</li>
-                <li>Deployed on Render with custom JavaScript widget, achieving sub-500ms inference latency</li>
-            </ul>
-        </div>
+            <section class="cv-section" aria-labelledby="skills-heading">
+                <h2 class="section-heading" id="skills-heading">Technical Skills</h2>
+                <dl class="skills-grid">
+                    <dt>Wireless and DSP</dt>
+                    <dd>Power-domain NOMA, SIC, BER analysis, Rayleigh fading, communication theory, detection and estimation, adaptive filtering</dd>
+                    <dt>Research Methods</dt>
+                    <dd>Analytical modeling, Monte Carlo simulation, performance characterization, technical writing, literature review</dd>
+                    <dt>Programming</dt>
+                    <dd>MATLAB, Python, C++; NumPy, Pandas, SciPy, scikit-learn, OpenCV</dd>
+                    <dt>Tools and Platforms</dt>
+                    <dd>Linux, Git/GitHub, ROS 2, Gazebo, PX4, MAVSDK, Docker</dd>
+                </dl>
+            </section>
 
-        <div class="project-entry">
-            <div class="project-header">
-                <span class="project-title">Receiver Design for 5G NOMA Uplink</span>
-                <span class="project-date">July 2025 - May 2026 | Master's Thesis</span>
-            </div>
-            <ul class="project-bullets">
-                <li>Designed a receiver pipeline for NOMA-based concurrent transmission using machine learning assisted detection to approximate optimal SIC</li>
-                <li>Characterized BER performance in Rayleigh fading channels and refined data processing workflows using statistical estimation concepts</li>
-            </ul>
-        </div>
+            <section class="cv-section" aria-labelledby="additional-heading">
+                <h2 class="section-heading" id="additional-heading">Additional Information</h2>
+                <dl class="skills-grid">
+                    <dt>Certifications</dt>
+                    <dd>WIPO General Course on Intellectual Property; WIPO Essentials of Patents; CS105: Introduction to Python; Introduction to the Internet of Things</dd>
+                    <dt>Languages</dt>
+                    <dd>English (professional), Hindi (full professional), Nepali (native/bilingual), Maithili (native/bilingual)</dd>
+                </dl>
+            </section>
 
-        <div class="project-entry">
-            <div class="project-header">
-                <span class="project-title">Smart Surveillance with Computer Vision</span>
-                <span class="project-date">July - Dec 2024 | Academic</span>
-            </div>
-            <ul class="project-bullets">
-                <li>Developed real-time object detection system using Python & OpenCV for motion tracking</li>
-                <li>Implemented Edge Detection and background subtraction for automated intruder identification</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Two Column: Certifications and Languages -->
-    <div class="two-col">
-        <!-- Certifications -->
-        <section class="section">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-item">
-                <span><span class="cert-name">General Course on IP (DL-101)</span> - <span class="cert-org">WIPO Academy, 2025</span></span>
-            </div>
-            <div class="cert-item">
-                <span><span class="cert-name">Essentials of Patents (DL-320)</span> - <span class="cert-org">WIPO Academy, 2025</span></span>
-            </div>
-            <div class="cert-item">
-                <span><span class="cert-name">CS105: Introduction to Python</span> - <span class="cert-org">Saylor Academy, 2023</span></span>
-            </div>
-            <div class="cert-item">
-                <span><span class="cert-name">Internet of Things (IoT)</span> - <span class="cert-org">Certification Course</span></span>
-            </div>
-            <div class="cert-item">
-                <span><span class="cert-name">Web Design</span> - <span class="cert-org">Certification Course</span></span>
-            </div>
-        </section>
-
-        <!-- Languages -->
-        <section class="section">
-            <h2 class="section-title">Languages</h2>
-            <div class="languages-list">
-                <div class="lang-item"><span class="lang-name">English</span> <span class="lang-level">(Professional)</span></div>
-                <div class="lang-item"><span class="lang-name">Hindi</span> <span class="lang-level">(Native)</span></div>
-                <div class="lang-item"><span class="lang-name">Nepali</span> <span class="lang-level">(Native)</span></div>
-                <div class="lang-item"><span class="lang-name">Maithili</span> <span class="lang-level">(Native)</span></div>
-            </div>
-        </section>
-    </div>
-
+            <p class="updated">Updated August 2026</p>
+        </main>
+    </article>
 </body>
 </html>

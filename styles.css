@@ -133,6 +133,9 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    border: 0;
+    padding: 0.4rem;
+    background: transparent;
 }
 
 .hamburger span {
@@ -490,27 +493,11 @@ body {
     font-weight: 500;
 }
 
-/* University Logo Styles */
+/* Education heading */
 .edu-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
     margin-bottom: 0.5rem;
-}
-
-.uni-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 8px;
-    background: white;
-    padding: 5px;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease;
-}
-
-.uni-logo:hover {
-    transform: scale(1.1);
 }
 
 .edu-header h3 {
@@ -1459,16 +1446,48 @@ body {
 }
 
 @media (max-width: 640px) {
+    .hero {
+        min-height: 100svh;
+        padding: 7rem 1rem 3.5rem;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 9vw, 2.35rem);
+        margin-bottom: 1rem;
+    }
+
+    .typing-text {
+        max-width: 100%;
+        border-right: 0;
+        white-space: normal;
+        overflow: visible;
+        animation: fadeInUp 0.7s ease;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
+        line-height: 1.45;
+    }
+
+    .hero-institution {
+        margin-bottom: 1.75rem;
+        font-size: 1rem;
+        line-height: 1.45;
     }
 
     .hero-buttons {
         flex-direction: column;
+        width: min(100%, 330px);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 
     .hero-profile-photo {
@@ -1512,10 +1531,7 @@ body {
     }
 
     .chatbot-cta {
-        bottom: 80px;
-        right: 15px;
-        padding: 8px 12px;
-        font-size: 11px;
+        display: none;
     }
 
     .cta-arrow {

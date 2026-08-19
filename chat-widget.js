@@ -11,7 +11,8 @@ const ChatWidget = (function() {
         position: 'bottom-right',
         greeting: "Hi! I'm Shashi's AI Assistant. How can I help you today?",
         placeholder: 'Type your message...',
-        title: "Shashi's AI Assistant"
+        title: "Shashi's AI Assistant",
+        profileContext: ''
     };
 
     let conversationHistory = [];
@@ -75,14 +76,14 @@ const ChatWidget = (function() {
                         
                         <!-- Quick Actions -->
                         <div class="quick-actions">
-                            <button class="quick-action" data-message="What are your key technical skills?">
-                                💡 Technical Skills
+                            <button class="quick-action" data-message="What are Shashi's research interests?">
+                                💡 Research Interests
                             </button>
-                            <button class="quick-action" data-message="Tell me about your projects">
-                                🚀 Projects
+                            <button class="quick-action" data-message="Tell me about Shashi's master's thesis">
+                                📡 Master's Thesis
                             </button>
-                            <button class="quick-action" data-message="Tell me about Telecom Demystified blog">
-                                📡 Telecom Blog
+                            <button class="quick-action" data-message="Tell me about Shashi's manuscript in preparation">
+                                📄 Research Manuscript
                             </button>
                             <button class="quick-action" data-message="How can I contact you?">
                                 📬 Contact Info
@@ -214,6 +215,14 @@ const ChatWidget = (function() {
         const loadingId = showLoading();
 
         try {
+            const requestHistory = conversationHistory.slice(-8);
+            if (config.profileContext) {
+                requestHistory.unshift({
+                    role: 'assistant',
+                    content: `Verified current profile context: ${config.profileContext}`
+                });
+            }
+
             const response = await fetch(`${config.apiUrl}/chat`, {
                 method: 'POST',
                 headers: {
@@ -221,7 +230,7 @@ const ChatWidget = (function() {
                 },
                 body: JSON.stringify({
                     message: message,
-                    conversation_history: conversationHistory.slice(-10) // Keep last 10 messages
+                    conversation_history: requestHistory.slice(-10)
                 })
             });
 
