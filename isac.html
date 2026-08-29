@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISAC Learning Track | Shashi Bhushan Jha</title>
-    <meta name="description" content="Shashi Bhushan Jha's active learning roadmap in integrated sensing and communication, covering mathematical foundations, waveform design, estimation, and future research questions.">
+    <meta name="description" content="Shashi Bhushan Jha's active learning roadmap in integrated sensing and communication, covering mathematical foundations, waveform design, estimation, and technical study resources.">
     <meta name="author" content="Shashi Bhushan Jha">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://shashibhushanjha.me/isac.html">
@@ -40,7 +40,7 @@
                         <p>I am building a structured understanding of ISAC through research papers, specialist texts, standards, and recorded technical lectures. My focus is to extend my foundation in analytical wireless modeling, BER evaluation, SIC, and Monte Carlo simulation toward systems that communicate and sense jointly.</p>
                         <div class="topic-tags" aria-label="ISAC themes"><span class="topic-tag">Joint waveforms</span><span class="topic-tag">Detection &amp; estimation</span><span class="topic-tag">Beamforming</span><span class="topic-tag">Performance tradeoffs</span></div>
                     </div>
-                    <aside class="status-panel"><span class="status-label">Current study</span><h2>A prospective direction grounded in signal processing</h2><p>This page records a learning direction and questions I hope to investigate. It does not present ISAC as completed research experience.</p></aside>
+                    <aside class="status-panel"><span class="status-label">Current study</span><h2>A learning track grounded in signal processing</h2><p>This page records the concepts and source material I am studying. It does not present ISAC as completed research experience.</p></aside>
                 </div>
             </div>
         </section>
@@ -52,7 +52,7 @@
 
         <section class="content-section" aria-labelledby="why-heading">
             <div class="interest-container">
-                <div class="section-heading"><p class="section-kicker">Why this matters for 6G</p><h2 id="why-heading">Communication links that also understand their environment</h2><p>ISAC treats sensing as a native network function rather than an isolated radar task. It creates research questions across waveform design, shared hardware, estimation accuracy, communication reliability, interference, and resource allocation.</p></div>
+                <div class="section-heading"><p class="section-kicker">Why this matters for 6G</p><h2 id="why-heading">Communication links that also understand their environment</h2><p>ISAC treats sensing as a native network function rather than an isolated radar task. Its study connects waveform design, shared hardware, estimation accuracy, communication reliability, interference, and resource allocation.</p></div>
                 <div class="method-grid">
                     <article class="method-card"><span class="method-number">01</span><h3>Signal models</h3><p>Study how communication symbols, target reflections, clutter, channels, arrays, and noise enter one mathematical system.</p></article>
                     <article class="method-card"><span class="method-number">02</span><h3>Performance measures</h3><p>Connect BER and achievable rate with detection probability, estimation error, Fisher information, and Cramér–Rao bounds.</p></article>
@@ -117,25 +117,14 @@
             <div class="interest-container"><article class="bridge-card">
                 <div><p class="section-kicker">Bridge from completed work</p><h2 id="bridge-heading">Why ISAC is a credible next step</h2></div>
                 <div><p>My existing work supplies analytical and simulation habits that can be extended to joint sensing and communication without presenting that extension as already complete.</p><div class="bridge-points">
-                    <div class="bridge-point"><strong>NOMA and SIC</strong> Multi-user ordering, power allocation, and error propagation suggest concrete questions for joint communication–sensing design.</div>
+                    <div class="bridge-point"><strong>NOMA and SIC</strong> Multi-user ordering, power allocation, and error propagation provide a conceptual bridge to joint communication–sensing design.</div>
                     <div class="bridge-point"><strong>Detection and estimation foundation</strong> My M.Tech coursework provides the statistical framework needed for range, Doppler, angle, and target-detection models.</div>
                     <div class="bridge-point"><strong>UAV simulation experience</strong> ROS 2 and MAVLink work offers a practical route toward reproducible mobile-ISAC scenarios, once the sensing and channel models are added.</div>
                 </div></div>
             </article></div>
         </section>
 
-        <section class="content-section alt" aria-labelledby="questions-heading">
-            <div class="interest-container">
-                <div class="section-heading"><p class="section-kicker">Prospective research</p><h2 id="questions-heading">Questions I want to explore</h2><p>These are intended doctoral questions, not current-project claims.</p></div>
-                <ol class="question-list">
-                    <li>How can NOMA user ordering and power allocation be co-designed with ISAC waveform or beamforming to balance BER and imperfect-SIC reliability against range, velocity, and angle accuracy?</li>
-                    <li>Can analytical and Monte Carlo models quantify how SIC error propagation, hardware impairments, clutter, and synchronization errors reshape the communication–sensing Pareto frontier?</li>
-                    <li>How can UAV mobility scenarios from ROS 2 and MAVLink simulations be coupled to adaptive ISAC beam and resource scheduling in a reproducible workflow?</li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="content-section" aria-labelledby="standards-heading">
+        <section class="content-section alt" aria-labelledby="standards-heading">
             <div class="interest-container">
                 <div class="section-heading"><p class="section-kicker">Standards lens</p><h2 id="standards-heading">Connecting research models to emerging specifications</h2></div>
                 <div class="topic-card-grid">

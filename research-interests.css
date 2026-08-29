@@ -570,34 +570,6 @@ button:focus-visible {
     margin-bottom: 0.18rem;
 }
 
-.question-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    counter-reset: question;
-    list-style: none;
-}
-
-.question-list li {
-    counter-increment: question;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 1.35rem;
-    background: var(--surface);
-}
-
-.question-list li::before {
-    display: block;
-    margin-bottom: 0.9rem;
-    color: var(--accent);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    content: "QUESTION " counter(question, decimal-leading-zero);
-}
-
 .hub-hero .topic-hero-grid {
     grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.8fr);
 }
@@ -805,9 +777,6 @@ button:focus-visible {
         max-width: 620px;
     }
 
-    .question-list {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 680px) {

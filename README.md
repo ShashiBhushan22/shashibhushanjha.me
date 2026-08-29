@@ -6,7 +6,7 @@ Personal academic portfolio and research CV for Shashi Bhushan Jha, presenting m
 
 - `index.html` — portfolio, research summary, education, experience, projects, certificates, and contact information
 - `research-interests.html` — central roadmap separating demonstrated research from active learning directions
-- `quantum-communication.html`, `isac.html`, `ntn-satellite-communication.html`, `optical-communication.html`, and `future-6g.html` — dedicated mathematics-first learning tracks with curated source material and prospective research questions
+- `quantum-communication.html`, `isac.html`, `ntn-satellite-communication.html`, `optical-communication.html`, and `future-6g.html` — dedicated mathematics-first learning tracks with curated source material
 - `research-interests.css` — shared design system for the research-interest hub and topic pages
 - `cv-print.html` — canonical, responsive, print-ready academic CV
 - `Shashi_Bhushan_Jha_CV.pdf` — downloadable A4 academic CV generated from `cv-print.html`
