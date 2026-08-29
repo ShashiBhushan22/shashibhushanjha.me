@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <a class="site-skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -49,7 +50,7 @@
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="research-interests.html" class="nav-link">Interests</a></li>
                 <li><a href="cv-print.html" class="nav-link">CV</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -61,6 +62,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -75,7 +77,7 @@
             <div class="hero-buttons">
                 <a href="Shashi_Bhushan_Jha_CV.pdf" class="btn btn-primary" download><i class="fas fa-download"></i> Download CV</a>
                 <a href="cv-print.html" class="btn btn-secondary"><i class="fas fa-file-alt"></i> View CV</a>
-                <a href="#certificates" class="btn btn-secondary"><i class="fas fa-certificate"></i> Certificates</a>
+                <a href="research-interests.html" class="btn btn-secondary"><i class="fas fa-compass"></i> Research Interests</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
             <div class="social-links">
@@ -126,8 +128,56 @@
                         <p>ISAC · NTN/satellite · Optical · Quantum · Emerging wireless systems</p>
                     </div>
                     <p class="trajectory-goal"><strong>Research approach</strong> Mathematics-first modeling, simulation, and performance evaluation across emerging communication systems.</p>
+                    <a class="trajectory-link" href="research-interests.html">Explore the detailed learning tracks <span aria-hidden="true">→</span></a>
                 </aside>
             </div>
+        </div>
+    </section>
+
+    <!-- Research Interest Learning Tracks -->
+    <section id="research-interests" class="section interest-overview" aria-labelledby="interest-overview-heading">
+        <div class="container">
+            <div class="interest-overview-header">
+                <div>
+                    <p class="interest-overview-kicker">Active preparation for doctoral research</p>
+                    <h2 class="section-title" id="interest-overview-heading">Research Interest Learning Tracks</h2>
+                    <p class="section-subtitle">Separate, mathematics-first pages documenting the concepts, literature, lectures, standards, and prospective questions guiding my development.</p>
+                </div>
+                <a class="interest-overview-all" href="research-interests.html">View the complete roadmap <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="interest-overview-grid">
+                <article class="interest-overview-card quantum-track">
+                    <span class="interest-track-status">Active learning</span>
+                    <h3>Quantum Communication</h3>
+                    <p>Quantum information, QKD, quantum channels, and hybrid classical–quantum networks.</p>
+                    <a href="quantum-communication.html" aria-label="Explore the Quantum Communication learning track">Explore track <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="interest-overview-card isac-track">
+                    <span class="interest-track-status">Active learning</span>
+                    <h3>Integrated Sensing &amp; Communication</h3>
+                    <p>Joint waveform design, detection and estimation, beamforming, and sensing–communication tradeoffs.</p>
+                    <a href="isac.html" aria-label="Explore the ISAC learning track">Explore track <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="interest-overview-card ntn-track">
+                    <span class="interest-track-status">Active learning</span>
+                    <h3>NTN &amp; Satellite Communication</h3>
+                    <p>Ground–air–space links, NR-NTN, Doppler, link budgets, mobility, and resource management.</p>
+                    <a href="ntn-satellite-communication.html" aria-label="Explore the NTN and Satellite Communication learning track">Explore track <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="interest-overview-card optical-track">
+                    <span class="interest-track-status">Active learning</span>
+                    <h3>Optical Communication</h3>
+                    <p>Fiber and free-space optical systems, coherent receivers, optical DSP, and hybrid links.</p>
+                    <a href="optical-communication.html" aria-label="Explore the Optical Communication learning track">Explore track <span aria-hidden="true">→</span></a>
+                </article>
+                <article class="interest-overview-card future-track">
+                    <span class="interest-track-status">Integrating perspective</span>
+                    <h3>Emerging 6G Technologies</h3>
+                    <p>IMT-2030, AI-native networks, advanced radio, heterogeneous connectivity, resilience, and sustainability.</p>
+                    <a href="future-6g.html" aria-label="Explore the Emerging 6G Technologies learning track">Explore track <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+            <p class="interest-integrity-note"><strong>Research integrity:</strong> these pages describe ongoing study and prospective directions. My completed research experience is identified separately in the Research section and CV.</p>
         </div>
     </section>
 
@@ -515,7 +565,7 @@
                         <p class="cert-date"><i class="fas fa-calendar"></i> November - December 2025</p>
                         <p class="cert-desc">Comprehensive course covering fundamentals of intellectual property rights including patents, trademarks, copyrights, and trade secrets.</p>
                         <div class="cert-actions">
-                            <a href="certificates/wipo-dl101.pdf" class="cert-btn view-btn" target="_blank">
+                            <a href="certificates/wipo-dl101.pdf" class="cert-btn view-btn" target="_blank" rel="noopener">
                                 <i class="fas fa-eye"></i> View
                             </a>
                             <a href="certificates/wipo-dl101.pdf" class="cert-btn download-btn" download>
@@ -536,7 +586,7 @@
                         <p class="cert-date"><i class="fas fa-calendar"></i> November - December 2025</p>
                         <p class="cert-desc">Specialized course on patent systems, patent applications, patent searches, and the patent prosecution process.</p>
                         <div class="cert-actions">
-                            <a href="certificates/wipo-dl320.pdf" class="cert-btn view-btn" target="_blank">
+                            <a href="certificates/wipo-dl320.pdf" class="cert-btn view-btn" target="_blank" rel="noopener">
                                 <i class="fas fa-eye"></i> View
                             </a>
                             <a href="certificates/wipo-dl320.pdf" class="cert-btn download-btn" download>
@@ -557,7 +607,7 @@
                         <p class="cert-date"><i class="fas fa-calendar"></i> March 2023</p>
                         <p class="cert-desc">Comprehensive Python programming course covering fundamentals, data structures, and object-oriented programming concepts.</p>
                         <div class="cert-actions">
-                            <a href="certificates/python-saylor.pdf" class="cert-btn view-btn" target="_blank">
+                            <a href="certificates/python-saylor.pdf" class="cert-btn view-btn" target="_blank" rel="noopener">
                                 <i class="fas fa-eye"></i> View
                             </a>
                             <a href="certificates/python-saylor.pdf" class="cert-btn download-btn" download>
@@ -577,7 +627,7 @@
                         <p class="cert-date"><i class="fas fa-calendar"></i> Completed</p>
                         <p class="cert-desc">Course covering IoT fundamentals, sensors, embedded systems, and connected device programming.</p>
                         <div class="cert-actions">
-                            <a href="certificates/iot-certificate.png" class="cert-btn view-btn" target="_blank">
+                            <a href="certificates/iot-certificate.png" class="cert-btn view-btn" target="_blank" rel="noopener">
                                 <i class="fas fa-eye"></i> View
                             </a>
                             <a href="certificates/iot-certificate.png" class="cert-btn download-btn" download>
@@ -597,7 +647,7 @@
                         <p class="cert-date"><i class="fas fa-calendar"></i> Completed</p>
                         <p class="cert-desc">Web development course covering HTML, CSS, JavaScript, and responsive design principles.</p>
                         <div class="cert-actions">
-                            <a href="certificates/web-design-certificate.png" class="cert-btn view-btn" target="_blank">
+                            <a href="certificates/web-design-certificate.png" class="cert-btn view-btn" target="_blank" rel="noopener">
                                 <i class="fas fa-eye"></i> View
                             </a>
                             <a href="certificates/web-design-certificate.png" class="cert-btn download-btn" download>
@@ -677,6 +727,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -713,7 +765,7 @@
             position: 'bottom-right',
             greeting: "Hi! I'm Shashi's AI Assistant. Ask me about his wireless research, future 6G interests, thesis, experience, or skills.",
             title: "Chat with Shashi's AI",
-            profileContext: "As of August 2026, Shashi Bhushan Jha is an M.Tech graduate in Electrical Engineering (Communication and Signal Processing) from IIT Ropar with a final CGPA of 7.78/10. His completed research is in classical wireless communications. His thesis is 'Generalization of Downlink and Uplink NOMA Framework for Future Generation Technology' and covers mathematical derivations and simulation-based BER and throughput analysis of multi-user downlink and uplink power-domain NOMA over Rayleigh fading with SIC error modeling and oversampling. A separate manuscript on analytical BER study with hardware validation for N-user NOMA is prepared for submission to an IEEE Transactions journal and is currently undergoing internal faculty review; it has not yet entered IEEE peer review. His relevant M.Tech coursework includes RF Systems for Communication, Analytical Techniques for Signal Processing, and Detection and Estimation Theory. For an M.Tech RF Systems for Communication course project, he designed and simulated a rat-race hybrid coupler in Ansys HFSS. His intended doctoral research scope is broad across future 6G and communication technologies rather than limited to one topic. His interests include integrated sensing and communication (ISAC), non-terrestrial networks (NTN), satellite communication, optical communication, quantum communication, quantum key distribution (QKD), quantum networking, quantum cryptography, multiple access, NOMA, and PHY-layer signal processing. He is a quick learner who prefers to understand new systems through their underlying mathematics, as demonstrated by the analytical derivations in his thesis. ISAC, NTN, satellite, optical, and quantum communications are intended research directions, not claims of completed research or established expertise in those areas. He was a Research Intern in autonomous systems at SkyFlock Uaviation Pvt. Ltd. from September 2025 to March 2026. He worked as a Trainee Associate in the Prosecution and Drafting Department at InventIP Legal Services LLP from 18 May 2026 to 12 August 2026. His contact numbers are +977 9827313007 and +91 7091678894. Exclude discontinued blog content."
+            profileContext: "As of August 2026, Shashi Bhushan Jha is an M.Tech graduate in Electrical Engineering (Communication and Signal Processing) from IIT Ropar with a final CGPA of 7.78/10. His completed research is in classical wireless communications. His thesis is 'Generalization of Downlink and Uplink NOMA Framework for Future Generation Technology' and covers mathematical derivations and simulation-based BER and throughput analysis of multi-user downlink and uplink power-domain NOMA over Rayleigh fading with SIC error modeling and oversampling. A separate manuscript on analytical BER study with hardware validation for N-user NOMA is prepared for submission to an IEEE Transactions journal and is currently undergoing internal faculty review; it has not yet entered IEEE peer review. His relevant M.Tech coursework includes RF Systems for Communication, Analytical Techniques for Signal Processing, and Detection and Estimation Theory. For an M.Tech RF Systems for Communication course project, he designed and simulated a rat-race hybrid coupler in Ansys HFSS. His intended doctoral research scope is broad across future 6G and communication technologies rather than limited to one topic. His interests include integrated sensing and communication (ISAC), non-terrestrial networks (NTN), satellite communication, optical communication, quantum communication, quantum key distribution (QKD), quantum networking, quantum cryptography, multiple access, NOMA, and PHY-layer signal processing. He is a quick learner who prefers to understand new systems through their underlying mathematics, as demonstrated by the analytical derivations in his thesis. The portfolio includes separate active-learning pages for Quantum Communication, ISAC, NTN and Satellite Communication, Optical Communication, and Emerging 6G Technologies. These pages document mathematical foundations, representative papers and books, standards, recorded university or professional-society lectures, and prospective questions guiding his preparation. They do not claim completed research, publications, projects, or established expertise in those emerging areas. He was a Research Intern in autonomous systems at SkyFlock Uaviation Pvt. Ltd. from September 2025 to March 2026. He worked as a Trainee Associate in the Prosecution and Drafting Department at InventIP Legal Services LLP from 18 May 2026 to 12 August 2026. His contact numbers are +977 9827313007 and +91 7091678894. Exclude discontinued blog content."
         });
     </script>
 </body>
