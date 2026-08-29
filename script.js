@@ -318,7 +318,7 @@ if ('IntersectionObserver' in window) {
 }
 
 console.log('🚀 Resume website loaded successfully!');
-console.log('💼 Shashi Bhushan Jha - Classical Wireless Research & Quantum Communication/Networking Interests');
+console.log('💼 Shashi Bhushan Jha - Wireless Communications Research & Future 6G Interests');
 console.log('📧 Contact: bhushan.gate2022@gmail.com');
 
 // ===============================================

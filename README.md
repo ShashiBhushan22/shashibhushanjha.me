@@ -1,6 +1,6 @@
 # shashibhushanjha.me
 
-Personal academic portfolio and research CV for Shashi Bhushan Jha, presenting completed work in classical wireless communications and research interests in quantum communication, QKD, quantum networking, quantum cryptography, and future classical–quantum 6G protocols. The site is built with plain HTML, CSS, and JavaScript and is published through GitHub Pages at [shashibhushanjha.me](https://shashibhushanjha.me/).
+Personal academic portfolio and research CV for Shashi Bhushan Jha, presenting mathematical and simulation-based work in wireless communications and broad research interests across ISAC, NTN, satellite, optical, quantum, and other future 6G communication technologies. The site is built with plain HTML, CSS, and JavaScript and is published through GitHub Pages at [shashibhushanjha.me](https://shashibhushanjha.me/).
 
 ## Main files
 
