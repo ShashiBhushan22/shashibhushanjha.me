@@ -1,12 +1,13 @@
 # shashibhushanjha.me
 
-Personal academic portfolio and research CV for Shashi Bhushan Jha, presenting mathematical and simulation-based work in wireless communications and broad research interests across ISAC, NTN, satellite, optical, quantum, and other future 6G communication technologies. The site is built with plain HTML, CSS, and JavaScript and is published through GitHub Pages at [shashibhushanjha.me](https://shashibhushanjha.me/).
+Personal academic portfolio and research CV for Shashi Bhushan Jha, presenting completed mathematical and simulation-based work in wireless communications, a primary doctoral interest in quantum communication and quantum-safe networks, and complementary interests across ISAC, NTN, satellite, optical, and other future 6G technologies. The site is built with plain HTML, CSS, and JavaScript and is published through GitHub Pages at [shashibhushanjha.me](https://shashibhushanjha.me/).
 
 ## Main files
 
 - `index.html` — portfolio, research summary, education, experience, projects, certificates, and contact information
 - `research-interests.html` — central roadmap separating demonstrated research from active learning directions
-- `quantum-communication.html`, `isac.html`, `ntn-satellite-communication.html`, `optical-communication.html`, and `future-6g.html` — dedicated mathematics-first learning tracks with curated source material
+- `quantum-communication.html` — primary mathematics-first learning track covering information representation, channels, QKD, networks, and hybrid quantum-safe security
+- `isac.html`, `ntn-satellite-communication.html`, `optical-communication.html`, and `future-6g.html` — complementary learning tracks with openly accessible source material
 - `research-interests.css` — shared design system for the research-interest hub and topic pages
 - `cv-print.html` — canonical, responsive, print-ready academic CV
 - `Shashi_Bhushan_Jha_CV.pdf` — downloadable A4 academic CV generated from `cv-print.html`
@@ -49,4 +50,4 @@ git push origin main
 
 GitHub Pages serves the repository root and uses the domain in `CNAME`.
 
-Last updated: August 2026.
+Last updated: September 2026.
